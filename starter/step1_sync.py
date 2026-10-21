@@ -15,11 +15,14 @@ from timer import print_time
 
 
 def work(n: int) -> None:
-    ...
+    print(f"start {n}")
+    time.sleep(1)
+    print(f"done n")
 
 
 def main() -> None:
-    ...
+    for i in range(1, 11):
+        work(i)
 
 
 if __name__ == "__main__":
