@@ -39,11 +39,14 @@ CLIENTS = [
 
 
 def handle_request(client: str, duration: float) -> None:
-    ...
+    log(f"{client}: запрос принят")
+    time.sleep(duration)
+    log(f"{client}: ответ отправлен")
 
 
 def main() -> None:
-    ...
+    for client_tupple in CLIENTS:
+        handle_request(*client_tupple)
 
 
 if __name__ == "__main__":
