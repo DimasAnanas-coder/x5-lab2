@@ -26,8 +26,10 @@ async def work(n: int) -> None:
 
 
 async def main() -> None:
+    coroutines = []
     for i in range(1, 11):
-        print(work(i))
+        coroutines.append(work(i))
+    await asyncio.gather(*coroutines)
 
 
 if __name__ == "__main__":
